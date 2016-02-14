@@ -1,0 +1,5 @@
+- hosts: localhost
+  tasks:
+    - name: Get URL
+
+      get_url: url=http://52.29.2.71:8081/artifactory/libs-snapshot-local/org/springframework/samples/spring-petclinic-razshoham/1.0.0-SNAPSHOT/spring-petclinic-razshoham-1.0.0-20160214.123215-1.war dest=/home/ec2-user/images/os_java_tomcat
