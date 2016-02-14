@@ -1,0 +1,5 @@
+# INSTRACTION PARAMETERS
+FROM centos:latest
+MAINTAINER razshoham
+RUN yum -y install java-1.8.0-openjdk-devel
+ADD raz_test_to_move_to_image.txt /raz_test_to_move_to_image_after_copy.txt
