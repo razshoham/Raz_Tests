@@ -1,0 +1,14 @@
+- hosts: localhost
+  sudo: yes
+  tasks:
+    - name: check or build image
+      docker_image: path="/home/ec2-user/build_image" name="razimage" state=build
+    - name: Run image 
+      docker:
+        name: mytomcat1
+        image: razimage 
+        state: started
+        expose:
+        - 8080
+        ports:
+        - "9090:8080" 
